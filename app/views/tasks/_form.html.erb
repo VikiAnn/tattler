@@ -11,21 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <label for="name"><%= f.label :name %></label><br>
+    <%= f.text_field :name, :class=>"form-control", :placeholder=> "Task name" %>
   </div>
-  <div class="field">
-    <%= f.label :completed %><br>
-    <%= f.check_box(:completed) %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+  <div class="form-group">
+    <label for="description"><%= f.label :description %><br>
+    <%= f.text_area :description, :class=>"form-control", :placeholder=> "Task description" %>
   </div>
   <div class="field">
     <%= f.label :deadline %><br>
     <%= f.date_select :deadline %>
+  </div>
+  <div class="checkbox">
+      <%= f.label :completed %>
+      <%= f.check_box(:completed) %>
   </div>
   <div class="actions">
     <%= f.submit %>
