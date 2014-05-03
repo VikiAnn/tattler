@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<table>
+<table class="table table-condensed">
   <thead>
     <tr>
       <th>Complete?</th>
@@ -30,8 +30,7 @@
           <td><%= f.check_box(:completed) %></td>
           <td><%= link_to task.name, task %></td>
           <td><%= task.deadline %></td>
-          <td><%= link_to 'Edit', edit_task_path(task) %></td>
-          <td><%= f.submit %></td>
+          <td><%= f.submit "Save", :class=> "btn btn-xs" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -40,4 +39,4 @@
 
 <br>
 
-<%= link_to 'New Task', new_task_path %>
+<%= link_to 'New Task', new_task_path, :class=> "btn btn-default" %>
